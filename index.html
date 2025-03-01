@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="极客科技GeekTech - 分享科技资源、软件工具、学习资料和实用指南。">
+    <meta name="keywords" content="极客科技,开源阅读,虚拟定位,大学资料,GeekTech,技术博客">
+    <link rel="canonical" href="https://yangmaomvp.github.io/index.html">
+    
+    <!-- 社交媒体分享信息 -->
+    <meta property="og:title" content="首页 - 极客科技GeekTech">
+    <meta property="og:description" content="探索科技的奇迹，分享知识的力量 - 极客科技GeekTech">
+    <meta property="og:url" content="https://yangmaomvp.github.io/index.html">
+    
+    <!-- 网站图标 -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- 样式表 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <style>
-        body {
-            background: url('data:image/svg+xml;utf8,<svg ...>...</svg>') repeat;
-            background-color: #1c1c1c;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
     <title>首页 - 极客科技GeekTech</title>
 </head>
 <body>
@@ -29,24 +44,59 @@
             <section id="home">
                 <hgroup>
                     <h2>欢迎来到极客科技GeekTech</h2>
-                    <h3>探索科技的奇迹</h3>
+                    <h3>探索科技的奇迹，分享知识的力量</h3>
                 </hgroup>
-                <p>这里是我的个人空间，你可以找到最新的技术分享和我的思考。</p>
+                <p>这里是我的个人技术分享空间，专注于提供实用的科技资源、软件工具和学习资料。</p>
+                
+                <div class="tags" style="margin-top: 20px;">
+                    <span class="tag">开源软件</span>
+                    <span class="tag">学习资源</span>
+                    <span class="tag">工具分享</span>
+                    <span class="tag">技术教程</span>
+                </div>
             </section>
             <section id="posts">
                 <h2>最新博文</h2>
-                <p>推文资源放在这里。</p>
-                <a href="posts.html" target="_blank">查看博文</a>
+                <div class="grid">
+                    <article>
+                        <h3><a href="post1.html">开源阅读</a></h3>
+                        <p class="post-date">2024-04-12</p>
+                        <p>功能强大的开源电子书阅读工具，支持多种格式和自定义书源。</p>
+                        <a href="post1.html" role="button">阅读全文</a>
+                    </article>
+                    <article>
+                        <h3><a href="post5.html">大学资料</a></h3>
+                        <p class="post-date">2024-04-12</p>
+                        <p>精选大学速成课、四六级真题和考研资料，助力学业提升。</p>
+                        <a href="post5.html" role="button">阅读全文</a>
+                    </article>
+                </div>
+                <a href="posts.html" role="button" class="secondary">查看所有博文</a>
             </section>
             <section id="about">
                 <h2>关于我</h2>
-                <p>简介。</p>
-                <a href="about.html" target="_blank">更多关于我</a>
+                <p>探索科技的奇迹，分享知识的力量。专注于提供优质实用的科技资源和工具。</p>
+                <p>微信公众号：极客科技GeekTech</p>
+                <a href="about.html" role="button" class="secondary">更多关于我</a>
             </section>
         </div>
     </main>
     <footer class="container">
-        <small><a href="#home">回到顶部</a> • <a href="#about">关于我</a></small>
+        <div class="grid">
+            <div>
+                <h3>极客科技GeekTech</h3>
+                <p>探索科技的奇迹，分享知识的力量</p>
+            </div>
+            <div>
+                <h3>链接</h3>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="posts.html">博文</a></li>
+                    <li><a href="about.html">关于我</a></li>
+                </ul>
+            </div>
+        </div>
+        <p><small>© 2024 极客科技GeekTech. All Rights Reserved.</small></p>
     </footer>
 </body>
 </html>

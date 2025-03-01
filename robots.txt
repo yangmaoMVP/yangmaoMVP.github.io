@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yangmaomvp.github.io/sitemap.xml
