@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>站内搜索 - 极客科技GeekTech</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-glow"></div>
+<header>
+	<nav class="top-nav">
+		<a href="index.html" class="site-title">极客科技GeekTech</a>
+		<ul>
+			<li><a href="index.html">首页</a></li>
+			<li><a href="posts.html">博文</a></li>
+			<li><a href="about.html">关于我</a></li>
+		</ul>
+	</nav>
+	<h1>站内搜索</h1>
+</header>
+<main>
+	<section class="card">
+		<form id="search-form" class="search-form">
+			<div style="display: flex; margin-bottom: 20px;">
+				<input type="search" id="search-input" placeholder="输入关键词搜索..." style="flex: 1; padding: 10px; border-radius: 20px 0 0 20px; border: 1px solid #ccc; font-size: 16px;">
+				<button type="submit" class="fancy-btn" style="border-radius: 0 20px 20px 0; padding: 10px 20px; margin: 0;">搜索</button>
+			</div>
+		</form>
+		
+		<div id="search-results">
+			<p>请输入关键词进行搜索</p>
+		</div>
+	</section>
+</main>
+<footer>
+	<p>© 2024 极客科技GeekTech | 探索科技的奇迹，分享知识的力量</p>
+</footer>
+<script src="search.js"></script>
+</body>
+</html>
