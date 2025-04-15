@@ -1,14 +1,4 @@
 <!DOCTYPE html>
-<div class="search-bar" style="margin-top: 20px; max-width: 500px; margin-left: auto; margin-right: auto;">
-    <form action="search.html" method="get">
-        <div style="display: flex;">
-            <input type="search" name="q" placeholder="搜索文章、资源..." style="flex: 1; padding: 12px; border-radius: 20px 0 0 20px; border: none; font-size: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-            <button type="submit" style="background: linear-gradient(90deg, #36d1c4 50%, #5b86e5 95%); color: white; border: none; padding: 0 20px; border-radius: 0 20px 20px 0; cursor: pointer;">
-                🔍
-            </button>
-        </div>
-    </form>
-</div>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -23,6 +13,32 @@
     <title>首页 - 极客科技GeekTech</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .search-bar {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        .search-bar form {
+            display: flex;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border-radius: 30px;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            font-size: 16px;
+        }
+        .search-bar button {
+            background: linear-gradient(90deg, #36d1c4 50%, #5b86e5 95%);
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 30px 30px 0;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <div class="bg-glow"></div>
@@ -33,10 +49,19 @@
             <li><a href="index.html">首页</a></li>
             <li><a href="posts.html">博文</a></li>
             <li><a href="about.html">关于我</a></li>
+            <li><a href="contact.html">联系我们</a></li>
         </ul>
     </nav>
     <h1>极客科技GeekTech</h1>
     <p>探索科技的奇迹，分享知识的力量</p>
+    
+    <div class="search-bar">
+        <form action="search.html" method="get">
+            <input type="search" name="q" placeholder="搜索文章、资源..." required>
+            <button type="submit">🔍</button>
+        </form>
+    </div>
+    
     <button class="fancy-btn" id="welcome-btn">🌈 打个招呼</button>
     <div id="welcome" class="welcome-msg">🎉 欢迎来到极客科技GeekTech！🎉</div>
 </header>
@@ -68,6 +93,12 @@
                 <span class="tag">大学</span>
                 <span class="tag">四六级</span>
             </li>
+            <li>
+                <span class="post-date">2024-04-12</span>
+                <a href="post2.html">巨魔商店</a>
+                <span class="tag">工具软件</span>
+                <span class="tag">iOS</span>
+            </li>
         </ul>
         <a href="posts.html" class="fancy-btn secondary-btn" style="margin-top:20px;">查看所有博文</a>
     </section>
@@ -76,7 +107,7 @@
         <h2>关于我</h2>
         <p>探索科技的奇迹，分享知识的力量。专注于提供优质实用的科技资源和工具。</p>
         <p>微信公众号：极客科技GeekTech</p>
-        <a href="about.html" class="fancy-btn secondary-btn" style="margin-top:14px;">更多关于我</a>
+        <a href="about.html" class="fancy-btn secondary-btn" style="margin-top:14px;">了解更多</a>
     </section>
 </main>
 <footer>
