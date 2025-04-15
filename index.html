@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="极客科技GeekTech - 分享科技资源、软件工具、学习资料和实用指南。">
+    <meta name="keywords" content="极客科技,开源阅读,虚拟定位,大学资料,GeekTech,技术博客">
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <title>首页 - 极客科技GeekTech</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .search-bar {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        .search-bar form {
+            display: flex;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border-radius: 30px;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            font-size: 16px;
+        }
+        .search-bar button {
+            background: linear-gradient(90deg, #36d1c4 50%, #5b86e5 95%);
+            color: white;
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 30px 30px 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="bg-glow"></div>
+<header>
+    <nav class="top-nav">
+        <a href="index.html" class="site-title">极客科技GeekTech</a>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="posts.html">博文</a></li>
+            <li><a href="about.html">关于我</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+        </ul>
+    </nav>
+    <h1>极客科技GeekTech</h1>
+    <p>探索科技的奇迹，分享知识的力量</p>
+    
+    <div class="search-bar">
+        <form action="search.html" method="get">
+            <input type="search" name="q" placeholder="搜索文章、资源..." required>
+            <button type="submit">🔍</button>
+        </form>
+    </div>
+    
+    <button class="fancy-btn" id="welcome-btn">🌈 打个招呼</button>
+    <div id="welcome" class="welcome-msg">🎉 欢迎来到极客科技GeekTech！🎉</div>
+</header>
+<main>
+    <section class="card home-intro">
+        <h2>欢迎来到极客科技GeekTech</h2>
+        <p>这里是我的个人技术分享空间，专注于实用科技资源、软件工具和学习资料。</p>
+        <div class="tags" style="margin-top: 16px;">
+            <span class="tag">开源软件</span>
+            <span class="tag">学习资源</span>
+            <span class="tag">工具分享</span>
+            <span class="tag">技术教程</span>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>最新博文</h2>
+        <ul class="post-list">
+            <li>
+                <span class="post-date">2024-04-12</span>
+                <a href="post1.html">开源阅读</a>
+                <span class="tag">工具软件</span>
+                <span class="tag">阅读</span>
+            </li>
+            <li>
+                <span class="post-date">2024-04-12</span>
+                <a href="post5.html">大学资料</a>
+                <span class="tag">学习资源</span>
+                <span class="tag">大学</span>
+                <span class="tag">四六级</span>
+            </li>
+            <li>
+                <span class="post-date">2024-04-12</span>
+                <a href="post2.html">巨魔商店</a>
+                <span class="tag">工具软件</span>
+                <span class="tag">iOS</span>
+            </li>
+        </ul>
+        <a href="posts.html" class="fancy-btn secondary-btn" style="margin-top:20px;">查看所有博文</a>
+    </section>
+
+    <section class="card" id="about">
+        <h2>关于我</h2>
+        <p>探索科技的奇迹，分享知识的力量。专注于提供优质实用的科技资源和工具。</p>
+        <p>微信公众号：极客科技GeekTech</p>
+        <a href="about.html" class="fancy-btn secondary-btn" style="margin-top:14px;">了解更多</a>
+    </section>
+</main>
+<footer>
+    <p>© 2024 极客科技GeekTech | 探索科技的奇迹，分享知识的力量</p>
+</footer>
+<script>
+var wBtn = document.getElementById('welcome-btn');
+if(wBtn){
+    wBtn.onclick = function() {
+        document.getElementById('welcome').classList.add('show');
+    };
+}
+</script>
+</body>
+</html>
