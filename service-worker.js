@@ -35,3 +35,31 @@ self.addEventListener('fetch', event => {
     }))
   );
 });
+
+self.addEventListener('fetch', event => {
+  const {request} = event;
+  const url = new URL(request.url);
+  if(request.method !== 'GET'){return;}
+  if(url.pathname.match(/\.(png|jpg|jpeg|webp|svg|css|js)$/)){
+    event.respondWith(caches.open('static-v1').then(cache=>{
+      return cache.match(request).then(res=>{
+        const fetchPromise = fetch(request).then(network=>{
+          cache.put(request, network.clone());
+          return network;
+        });
+        return res || fetchPromise;
+      });
+    }));
+  }else{
+    // html stale-while-revalidate
+    event.respondWith(caches.open('html-v1').then(cache=>{
+      return cache.match(request).then(res=>{
+        const fetchPromise = fetch(request).then(network=>{
+          cache.put(request, network.clone());
+          return network;
+        });
+        return res || fetchPromise;
+      });
+    }));
+  }
+});
