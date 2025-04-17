@@ -302,3 +302,8 @@ footer {
     .post-date {margin-bottom:0.1em;min-width:auto;}
     .post-list a { font-size: 1em;}
 }
+
+#fuzzy-title {
+  max-width: 100%;
+  height: auto;
+}

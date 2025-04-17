@@ -114,3 +114,90 @@ document.addEventListener('DOMContentLoaded', function() {
 		document.head.appendChild(style);
 	}
 });
+
+
+// ========== FuzzyText Canvas Animation ==========
+window.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.getElementById("fuzzy-title");
+  if (!canvas) return;
+
+  const text = canvas.dataset.text || "极客科技GeekTech";
+  const ctx = canvas.getContext("2d");
+  const fontSize = 64;
+  const fontWeight = 900;
+  const fontFamily = "sans-serif";
+  const color = "#ffffff";
+  const baseIntensity = 0.18;
+  const hoverIntensity = 0.5;
+  const fuzzRange = 30;
+
+  canvas.style.display = "block";
+  canvas.style.margin = "0 auto";
+
+  const offscreen = document.createElement("canvas");
+  const offCtx = offscreen.getContext("2d");
+
+  ctx.font = `${fontWeight} ${fontSize}px ${fontFamily}`;
+  const metrics = ctx.measureText(text);
+  const ascent = metrics.actualBoundingBoxAscent || fontSize;
+  const descent = metrics.actualBoundingBoxDescent || fontSize * 0.2;
+  const width = Math.ceil(metrics.width);
+  const height = Math.ceil(ascent + descent);
+
+  offscreen.width = width;
+  offscreen.height = height;
+
+  offCtx.font = `${fontWeight} ${fontSize}px ${fontFamily}`;
+  offCtx.textBaseline = "alphabetic";
+  offCtx.fillStyle = color;
+  offCtx.fillText(text, 0, ascent);
+
+  canvas.width = width + 100;
+  canvas.height = height + 20;
+  ctx.translate(50, 10);
+
+  let isHovering = false;
+
+  const draw = () => {
+    ctx.clearRect(-fuzzRange, -fuzzRange, canvas.width, canvas.height);
+    const intensity = isHovering ? hoverIntensity : baseIntensity;
+
+    for (let y = 0; y < height; y++) {
+      const dx = Math.floor(intensity * (Math.random() - 0.5) * fuzzRange);
+      ctx.drawImage(offscreen, 0, y, width, 1, dx, y, width, 1);
+    }
+
+    requestAnimationFrame(draw);
+  };
+
+  draw();
+
+  const isInBounds = (x, y) => {
+    const rect = canvas.getBoundingClientRect();
+    return (
+      x >= rect.left &&
+      x <= rect.right &&
+      y >= rect.top &&
+      y <= rect.bottom
+    );
+  };
+
+  canvas.addEventListener("mousemove", (e) => {
+    isHovering = isInBounds(e.clientX, e.clientY);
+  });
+
+  canvas.addEventListener("mouseleave", () => {
+    isHovering = false;
+  });
+
+  canvas.addEventListener("touchmove", (e) => {
+    const touch = e.touches[0];
+    if (touch) {
+      isHovering = isInBounds(touch.clientX, touch.clientY);
+    }
+  });
+
+  canvas.addEventListener("touchend", () => {
+    isHovering = false;
+  });
+});
