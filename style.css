@@ -456,3 +456,110 @@ footer {
 .text-content {
   font-weight: 800;
 }
+
+
+/* === Rotating Text === */
+.rotating-text-wrapper {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 1rem auto;
+  height: 2rem;
+  overflow: hidden;
+  position: relative;
+  color: #ffffff;
+}
+
+.rotating-text {
+  display: block;
+  position: absolute;
+  width: 100%;
+  animation: rotateText 6s infinite;
+  text-align: center;
+}
+
+@keyframes rotateText {
+  0% { transform: translateY(0%); opacity: 1; }
+  20% { opacity: 1; }
+  25% { transform: translateY(-100%); opacity: 0; }
+  45% { opacity: 1; }
+  50% { transform: translateY(-200%); }
+  70% { opacity: 1; }
+  75% { transform: translateY(-300%); opacity: 0; }
+  100% { transform: translateY(0%); opacity: 1; }
+}
+
+/* === Falling Text === */
+.falling-text {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+  color: #40ffaa;
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fallIn 1s ease-out forwards;
+}
+
+@keyframes fallIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Blur Text === */
+.blur-text {
+  font-size: 1.25rem;
+  text-align: center;
+  color: #ffffff;
+  filter: blur(5px);
+  animation: blurIn 2s ease forwards;
+  margin-top: 1rem;
+}
+
+@keyframes blurIn {
+  to {
+    filter: blur(0px);
+  }
+}
+
+
+/* === Scroll Reveal === */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+  text-align: center;
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  color: #ffffff;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* === 返回顶部按钮 === */
+#backToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: rgba(64, 121, 255, 0.8);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  z-index: 999;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+#backToTop:hover {
+  background-color: #4079ff;
+}
