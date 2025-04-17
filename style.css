@@ -435,3 +435,24 @@ footer {
   color: transparent;
   animation: gradient linear infinite;
 }
+
+
+/* === Enhanced GradientText Styling === */
+.animated-gradient-text.custom-class {
+  padding: 0.5rem 1.25rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 15px rgba(64, 255, 170, 0.4), 0 0 15px rgba(64, 121, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(12px);
+  font-size: clamp(2rem, 5vw, 4.5rem);
+}
+
+.animated-gradient-text.custom-class:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(64, 255, 170, 0.6), 0 0 25px rgba(64, 121, 255, 0.6);
+}
+
+.text-content {
+  font-weight: 800;
+}
