@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>极客科技 GeekTech - 探索科技的奇迹，分享知识的力量</title>
+  <meta content="极客科技GeekTech - 提供高质量技术资源、开源软件与实用教程，助你高效学习与探索科技。" name="description" />
+  <meta content="GeekTech, 博客, AI, 极客, 科技, 前沿, 智能硬件, 开源软件, 学习资源" name="keywords" />
+  <meta content="极客科技 GeekTech 博客" property="og:title">
+  <meta content="探索 AI 与极客科技的世界，分享实用工具与学习资源。" property="og:description">
+  <meta content="website" property="og:type" />
+  <meta content="https://yangmaomvp.github.io/images/og-image.jpg" property="og:image" />
+  <meta content="https://yangmaomvp.github.io" property="og:url" />
+  <link href="favicon.ico" rel="icon" />
+  <link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link href="animations.css" rel="stylesheet" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#36d1c4" />
+</head>
+
+<body>
+  <div class="page-loader">
+    <div class="loader-circle"></div>
+  </div>
+
+  <div class="bg-glow"></div>
+  <div class="bg-glow secondary"></div>
+
+  <header class="site-header">
+    <nav class="top-nav">
+      <div class="nav-container">
+        <a class="site-title" href="index.html">
+          <span class="logo-text">极客科技<span class="accent">GeekTech</span></span>
+        </a>
+        <button class="mobile-menu-toggle" aria-label="打开菜单">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">首页</a></li>
+          <li><a href="posts.html">博文</a></li>
+          <li><a href="about.html">关于我</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+          <li>
+            <button aria-label="切换暗黑模式" id="theme-toggle" class="theme-toggle">
+              <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title reveal-text">极客科技 <span class="accent">GeekTech</span></h1>
+        <p class="hero-subtitle reveal-text delay-1">探索科技的奇迹，分享知识的力量</p>
+        <div class="hero-features reveal-text delay-2">
+          <span class="feature-tag">开源软件</span>
+          <span class="feature-tag">学习资源</span>
+          <span class="feature-tag">工具分享</span>
+          <span class="feature-tag">技术教程</span>
+        </div>
+        <div class="hero-cta reveal-text delay-3">
+          <a href="posts.html" class="primary-button">浏览文章</a>
+          <a href="#featured" class="secondary-button">精选内容</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="tech-illustration">
+          <div class="circle-pulse"></div>
+          <div class="tech-icon code"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
+          <div class="tech-icon book"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
+          <div class="tech-icon tool"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
+          <div class="tech-icon rocket"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="search-container">
+      <form action="search.html" method="get" class="search-form">
+        <input type="search" name="q" placeholder="搜索文章、资源..." required class="search-input" />
+        <button type="submit" class="search-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <main>
+    <section id="featured" class="featured-section">
+      <div class="section-header">
+        <h2 class="section-title">精选内容</h2>
+        <p class="section-subtitle">探索我们最受欢迎的文章和资源</p>
+      </div>
+
+      <div class="featured-grid">
+        <article class="featured-card primary">
+          <div class="card-content">
+            <div class="card-tags">
+              <span class="tag">工具软件</span>
+              <span class="tag">阅读</span>
+            </div>
+            <h3 class="card-title">开源阅读</h3>
+            <p class="card-excerpt">开源阅读是一款功能强大的电子书阅读器应用，支持多种格式，并允许添加自定义书源，让您畅享海量电子书资源。</p>
+            <div class="card-meta">
+              <span class="post-date">2024-04-12</span>
+              <span class="read-time">5 分钟阅读</span>
+            </div>
+            <a href="post1.html" class="card-link">阅读全文</a>
+          </div>
+          <div class="card-image">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+          </div>
+        </article>
+
+        <article class="featured-card">
+          <div class="card-content">
+            <div class="card-tags">
+              <span class="tag">学习资源</span>
+              <span class="tag">大学</span>
+            </div>
+            <h3 class="card-title">大学资料</h3>
+            <p class="card-excerpt">本文为广大大学生精选了丰富的学习资源，包括速成课程、四六级备考资料、考研复习材料等。</p>
+            <div class="card-meta">
+              <span class="post-date">2024-04-12</span>
+              <span class="read-time">7 分钟阅读</span>
+            </div>
+            <a href="post5.html" class="card-link">阅读全文</a>
+          </div>
+        </article>
+
+        <article class="featured-card">
+          <div class="card-content">
+            <div class="card-tags">
+              <span class="tag">工具软件</span>
+              <span class="tag">iOS</span>
+            </div>
+            <h3 class="card-title">巨魔商店</h3>
+            <p class="card-excerpt">巨魔商店(Trollstore)是一款iOS平台上的第三方应用安装工具，它允许用户在不越狱的情况下安装未经Apple官方认证的应用程序。</p>
+            <div class="card-meta">
+              <span class="post-date">2024-04-12</span>
+              <span class="read-time">6 分钟阅读</span>
+            </div>
+            <a href="post2.html" class="card-link">阅读全文</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="categories-section">
+      <div class="section-header">
+        <h2 class="section-title">内容分类</h2>
+        <p class="section-subtitle">按照您的兴趣浏览不同类别的内容</p>
+      </div>
+
+      <div class="categories-grid">
+        <a href="posts.html?category=tools" class="category-card">
+          <div class="category-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+            </svg>
+          </div>
+          <h3 class="category-title">工具软件</h3>
+          <p class="category-description">精选各类实用工具和应用推荐</p>
+        </a>
+
+        <a href="posts.html?category=resources" class="category-card">
+          <div class="category-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+          </div>
+          <h3 class="category-title">学习资源</h3>
+          <p class="category-description">优质的学习材料和教育资源</p>
+        </a>
+
+        <a href="posts.html?category=tutorials" class="category-card">
+          <div class="category-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+              <line x1="8" y1="2" x2="8" y2="18"></line>
+              <line x1="16" y1="6" x2="16" y2="22"></line>
+            </svg>
+          </div>
+          <h3 class="category-title">技术教程</h3>
+          <p class="category-description">简单易懂的操作指南和教程</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="latest-posts-section">
+      <div class="section-header">
+        <h2 class="section-title">最新文章</h2>
+        <p class="section-subtitle">探索我们最新发布的内容</p>
+      </div>
+
+      <div class="posts-grid">
+        <article class="post-card">
+          <a href="post1.html" class="post-link">
+            <div class="post-image">
+              <div class="post-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="post-content">
+              <div class="post-tags">
+                <span class="tag">工具软件</span>
+                <span class="tag">阅读</span>
+              </div>
+              <h3 class="post-title">开源阅读</h3>
+              <p class="post-excerpt">开源阅读是一款功能强大的电子书阅读器应用，支持多种格式，并允许添加自定义书源。</p>
+              <div class="post-meta">
+                <span class="post-date">2024-04-12</span>
+                <span class="read-time">5 分钟阅读</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="post2.html" class="post-link">
+            <div class="post-image">
+              <div class="post-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="M12 12h.01"></path>
+                  <path d="M17 12h.01"></path>
+                  <path d="M7 12h.01"></path>
+                </svg>
+              </div>
+            </div>
+            <div class="post-content">
+              <div class="post-tags">
+                <span class="tag">工具软件</span>
+                <span class="tag">iOS</span>
+              </div>
+              <h3 class="post-title">巨魔商店</h3>
+              <p class="post-excerpt">巨魔商店(Trollstore)是一款iOS平台上的第三方应用安装工具，无需越狱即可安装未认证应用。</p>
+              <div class="post-meta">
+                <span class="post-date">2024-04-12</span>
+                <span class="read-time">6 分钟阅读</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="post3.html" class="post-link">
+            <div class="post-image">
+              <div class="post-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+            </div>
+            <div class="post-content">
+              <div class="post-tags">
+                <span class="tag">工具软件</span>
+                <span class="tag">网络</span>
+              </div>
+              <h3 class="post-title">小火箭Shadowrocket</h3>
+              <p class="post-excerpt">Shadowrocket，俗称"小火箭"，是一款功能强大的网络工具应用，支持多种协议。</p>
+              <div class="post-meta">
+                <span class="post-date">2024-04-12</span>
+                <span class="read-time">8 分钟阅读</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="post4.html" class="post-link">
+            <div class="post-image">
+              <div class="post-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div class="post-content">
+              <div class="post-tags">
+                <span class="tag">工具软件</span>
+                <span class="tag">定位</span>
+              </div>
+              <h3 class="post-title">虚拟定位</h3>
+              <p class="post-excerpt">虚拟定位是一类能够修改设备GPS位置信息的软件工具，适用于多种场景。</p>
+              <div class="post-meta">
+                <span class="post-date">2024-04-12</span>
+                <span class="read-time">7 分钟阅读</span>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      <div class="view-all-container">
+        <a href="posts.html" class="view-all-button">查看所有文章</a>
+      </div>
+    </section>
+
+    <section class="newsletter-section">
+      <div class="newsletter-container">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title">订阅我们的更新</h2>
+          <p class="newsletter-description">获取最新的科技资讯、工具推荐和教程，直接发送到您的邮箱</p>
+        </div>
+        <form class="newsletter-form">
+          <input type="email" placeholder="您的邮箱地址" required class="newsletter-input" />
+          <button type="submit" class="newsletter-button">订阅</button>
+        </form>
+        <p class="newsletter-privacy">我们尊重您的隐私，绝不会分享您的邮箱地址</p>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="about-container">
+        <div class="about-content">
+          <h2 class="about-title">关于极客科技</h2>
+          <p class="about-description">探索科技的奇迹，分享知识的力量。我们致力于为读者提供高质量科技资源和工具分享，让科技惠及更多人。</p>
+          <a href="about.html" class="about-link">了解更多</a>
+        </div>
+        <div class="about-image">
+          <div class="about-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <span class="logo-text">极客科技<span class="accent">GeekTech</span></span>
+          <p class="footer-tagline">探索科技的奇迹，分享知识的力量</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h3 class="footer-heading">导航</h3>
+            <ul class="footer-nav">
+              <li><a href="index.html">首页</a></li>
+              <li><a href="posts.html">博文</a></li>
+              <li><a href="about.html">关于我</a></li>
+              <li><a href="contact.html">联系我们</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-heading">分类</h3>
+            <ul class="footer-nav">
+              <li><a href="posts.html?category=tools">工具软件</a></li>
+              <li><a href="posts.html?category=resources">学习资源</a></li>
+              <li><a href="posts.html?category=tutorials">技术教程</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3 class="footer-heading">关注我们</h3>
+            <p class="footer-social">微信公众号：极客科技GeekTech</p>
+            <p class="footer-social">GitHub：<a href="https://github.com/yangmaoMVP/yangmaoMVP.github.io" target="_blank">yangmaoMVP</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">© 2024 极客科技GeekTech | 探索科技的奇迹，分享知识的力量</p>
+        <div class="footer-meta">
+          <a href="#" class="footer-meta-link">隐私政策</a>
+          <a href="#" class="footer-meta-link">使用条款</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="回到顶部">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script defer src="main.js"></script>
+  <script defer src="theme.js"></script>
+  <script>
+    // Register service worker for PWA support
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(registration => {
+            console.log('ServiceWorker registered with scope:', registration.scope);
+          })
+          .catch(error => {
+            console.error('ServiceWorker registration failed:', error);
+          });
+      });
+    }
+  </script>
+</body>
+</html>
